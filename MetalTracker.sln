@@ -3,14 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalModels", "MetalModels\MetalModels.csproj", "{382597FE-7ACE-4A05-914C-87149D808A17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "MetalModels\Models.csproj", "{382597FE-7ACE-4A05-914C-87149D808A17}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{96A48DB9-874B-4086-997C-D8358DFC6878}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{1967FF90-9570-4DF5-B1BE-D7FEA6251240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GUI", "GUI\GUI.csproj", "{1967FF90-9570-4DF5-B1BE-D7FEA6251240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryTracker", "InventoryTracker\InventoryTracker.csproj", "{60CC00DE-4B64-4E34-8779-19416C73A7E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +30,10 @@ Global
 		{1967FF90-9570-4DF5-B1BE-D7FEA6251240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1967FF90-9570-4DF5-B1BE-D7FEA6251240}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1967FF90-9570-4DF5-B1BE-D7FEA6251240}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{60CC00DE-4B64-4E34-8779-19416C73A7E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60CC00DE-4B64-4E34-8779-19416C73A7E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60CC00DE-4B64-4E34-8779-19416C73A7E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60CC00DE-4B64-4E34-8779-19416C73A7E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
