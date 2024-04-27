@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GUI
-{
-    class README
-    {
-    }
-}
+﻿'''
+Author:			Sam Oblad
+Start Date:		27-April-2024
+GitHub ID:		sam-oblad
+Repo:			https://github.com/Sam-Oblad/MetalTracker
+Project:		GUI
+'''
