@@ -18,6 +18,8 @@ namespace GUI
         private void NewInventoryFile(Object Sender, EventArgs a)
         {
             ChangeToInventoryPage();
+            OunceWidget.Text = " 0.00";
+            PriceWidget.Text = " 0.00";
         }
 
         private void ChangeToInventoryPage()
@@ -28,8 +30,16 @@ namespace GUI
 
         private void NewInventoryEntry(Object Sender, EventArgs a)
         {
+        }
+
+        private void Save(Object Sender, EventArgs a)
+        {
 
         }
 
+        private void AddEntry(Object Sender, EventArgs a)
+        {
+
+        }
     }
 }
