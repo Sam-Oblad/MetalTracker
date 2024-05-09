@@ -2,10 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GUI.MainPage"
+             BackgroundColor="Beige"
              >
 
     <ContentPage.MenuBarItems>
         <MenuBarItem Text="File">
+            <MenuFlyoutItem Text="New" />
+            <MenuFlyoutItem Text="Open"/>
             <MenuFlyoutItem Text="Save"/>
         </MenuBarItem>
         <MenuBarItem Text="Help">
@@ -14,7 +17,48 @@
     </ContentPage.MenuBarItems>
 
     <VerticalStackLayout>
+        <VerticalStackLayout 
+            x:Name="WelcomePrompt"
+            Margin="0,200,0,0">
 
+            <Label 
+                HorizontalOptions="Center"
+                TextColor="Black">Welcome to Metal Tracker</Label>
+            <Label 
+                HorizontalOptions="Center"
+                TextColor="Black">Please Load an existing inventory or create a new one:</Label>
+            <HorizontalStackLayout 
+                HorizontalOptions="Center"
+                Margin="50"
+                >
+                <Border
+                    MinimumWidthRequest="75"
+                    >
+                    <Button
+                        BackgroundColor="azure"
+                        CornerRadius="0"
+                        TextColor="Black"
+                        Text="New"
+                        x:Name="NewButton"
+                        ></Button>
+                </Border>
+                <Border>
+                    <Button
+                        MinimumWidthRequest="75"
+                        BackgroundColor="azure"
+                        CornerRadius="0"
+                        TextColor="Black"
+                        Text="Open"
+                        x:Name="OpenButton"
+                        ></Button>
+                </Border>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Label></Label>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 
+
+    
 </ContentPage>
