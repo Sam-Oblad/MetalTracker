@@ -40,6 +40,7 @@
                         TextColor="Black"
                         Text="New"
                         x:Name="NewButton"
+                        Pressed="NewInventoryFile"
                         ></Button>
                 </Border>
                 <Border>
@@ -50,13 +51,62 @@
                         TextColor="Black"
                         Text="Open"
                         x:Name="OpenButton"
+                        Pressed="OpenInventoryFile"
                         ></Button>
                 </Border>
             </HorizontalStackLayout>
         </VerticalStackLayout>
-        <HorizontalStackLayout>
-            <Label></Label>
-        </HorizontalStackLayout>
+        <Border
+            MinimumHeightRequest="800"
+            MinimumWidthRequest="800"
+            x:Name="InventoryPage"
+            >
+            <VerticalStackLayout>
+                <HorizontalStackLayout
+                Margin="100,10,0,0"
+                >
+                    <Label TextColor="Black">Total Ounces:</Label>
+                    <Label TextColor="Black" x:Name="OunceWidget"></Label>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
+                Margin="100,10,0,0"
+                >
+                    <Label TextColor="Black">Total Price:</Label>
+                    <Label TextColor="Black" x:Name="PriceWidget"></Label>
+                    <Border
+                        Margin="425,0,0,0"
+                        >
+                        <Button
+                        BackgroundColor="azure"
+                        CornerRadius="0"
+                        TextColor="Black"
+                        Text="New Entry"
+                        x:Name="NewInventoryEntryButton"
+                        Pressed="NewInventoryEntry"
+                        ></Button>
+                    </Border> 
+                </HorizontalStackLayout>
+
+                <Border
+                    MinimumHeightRequest="500"
+                    MaximumWidthRequest="500"
+                    Margin="25"
+                    >
+                    <ScrollView 
+                    BackgroundColor="White"
+                    x:Name="InventoryScrollView"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                            >
+                        <Label TextColor="Black">Test</Label>
+                    </ScrollView>
+                </Border>
+
+
+            </VerticalStackLayout>
+            
+        </Border>
+
     </VerticalStackLayout>
 
 
