@@ -11,7 +11,6 @@ namespace GUI
         {
             InitializeComponent();
             inventory = new();
-            InventoryPage.IsVisible = false;
         }
 
         private void OpenInventoryFile(Object Sender, EventArgs a)
@@ -29,14 +28,8 @@ namespace GUI
         private void ChangeToInventoryPage()
         {
             WelcomePrompt.IsVisible = false;
+            AddEntryPage.IsVisible = false;
             InventoryPage.IsVisible = true;
-        }
-
-        private void NewInventoryEntry(Object Sender, EventArgs a)
-        {
-            //TODO: Popup alert in gui to ask for metal type and the such
-            //InventoryEntry entry = new();
-            //inventory.addEntry();
         }
 
         private void Save(Object Sender, EventArgs a)
@@ -49,5 +42,16 @@ namespace GUI
             InventoryPage.IsVisible = false;
             AddEntryPage.IsVisible = true;
         }
+
+        private void CancelEntry(Object sender, EventArgs a)
+        {
+            ChangeToInventoryPage();
+        }
+
+        private void FinishEntry(Object Sender, EventArgs a)
+        {
+            ChangeToInventoryPage();
+        }
+
     }
 }

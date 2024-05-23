@@ -7,7 +7,7 @@
 
     <ContentPage.MenuBarItems>
         <MenuBarItem Text="File">
-            <MenuFlyoutItem Text="New" Clicked="NewInventoryEntry"/>
+            <MenuFlyoutItem Text="New" Clicked="NewInventoryFile"/>
             <MenuFlyoutItem Text="Open" Clicked="OpenInventoryFile"/>
             <MenuFlyoutItem Text="Save" Clicked="Save"/>
         </MenuBarItem>
@@ -63,6 +63,7 @@
         MinimumHeightRequest="800"
         MinimumWidthRequest="800"
         x:Name="InventoryPage"
+        IsVisible="False"
         >
             <VerticalStackLayout
             Padding="10"    
@@ -98,17 +99,33 @@
 
 
             </VerticalStackLayout>
-            
+
         </Border>
 
         <VerticalStackLayout
             x:Name="AddEntryPage"
             IsVisible="False"
         >
-            
+            <HorizontalStackLayout
+                HorizontalOptions="Center"    
+            >
+                <Button
+                     MinimumWidthRequest="75"
+                     BackgroundColor="azure"
+                     CornerRadius="0"
+                     TextColor="Black"
+                    Text="Cancel"
+                    Clicked="CancelEntry"
+                ></Button>
+                <Button
+                     MinimumWidthRequest="75"
+                     BackgroundColor="azure"
+                     CornerRadius="0"
+                     TextColor="Black"
+                    Text="Add"
+                    Clicked="FinishEntry"
+                ></Button>
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </VerticalStackLayout>
-
-
-    
 </ContentPage>
