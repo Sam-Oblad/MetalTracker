@@ -46,7 +46,8 @@ namespace GUI
 
         private void AddEntry(Object Sender, EventArgs a)
         {
-
+            InventoryPage.IsVisible = false;
+            AddEntryPage.IsVisible = true;
         }
     }
 }

@@ -101,6 +101,12 @@
             
         </Border>
 
+        <VerticalStackLayout
+            x:Name="AddEntryPage"
+            IsVisible="False"
+        >
+            
+        </VerticalStackLayout>
     </VerticalStackLayout>
 
 
