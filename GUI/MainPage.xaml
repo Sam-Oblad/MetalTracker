@@ -105,9 +105,28 @@
         <VerticalStackLayout
             x:Name="AddEntryPage"
             IsVisible="False"
-        >
+            VerticalOptions="Center"
+            Padding="100"
+            >
             <HorizontalStackLayout
-                HorizontalOptions="Center"    
+                 HorizontalOptions="Center"
+                >
+                <Label Text="Quantity: " TextColor="Black"></Label>
+                <Border
+                MinimumWidthRequest="275"
+                >
+                    <Entry></Entry>
+                </Border>
+                <Label Text="Price: " TextColor="Black"></Label>
+                <Border
+                MinimumWidthRequest="275"
+                >
+                    <Entry></Entry>
+                </Border>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
             >
                 <Button
                      MinimumWidthRequest="75"
