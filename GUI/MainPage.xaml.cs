@@ -29,10 +29,13 @@ namespace GUI
 
         private void ChangeToInventoryPage()
         {
-            //foreach(InventoryEntry entry in inventory)
-            //{
-
-            //}
+            foreach (InventoryEntry entry in inventory.metalInventory)
+            {
+                Label label = new Label();
+                label.TextColor = Colors.Black;
+                label.Text = $"Date: {entry.dateAcquired} Ounces: {entry.ounces} Price: {entry.amountPaid} Location:{entry.location}";
+                Table.Add(label);
+            }
             WelcomePrompt.IsVisible = false;
             AddEntryPage.IsVisible = false;
             InventoryPage.IsVisible = true;

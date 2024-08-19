@@ -84,8 +84,8 @@
                 </HorizontalStackLayout>
 
                 <Border
-                    MinimumHeightRequest="500"
-                    MinimumWidthRequest="500"
+                    MaximumHeightRequest="500"
+                    MaximumWidthRequest="500"
                     HorizontalOptions="Center"
                     >
                     <ScrollView 
@@ -94,6 +94,7 @@
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand"
                     >
+                        <VerticalStackLayout x:Name="Table" HorizontalOptions="Center"></VerticalStackLayout>
                     </ScrollView>
                 </Border>
 
