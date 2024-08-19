@@ -52,5 +52,8 @@ namespace InventoryTracker
                 totalPricePaid -= entry.amountPaid;
             }
         }
+
+
+        
     }
 }

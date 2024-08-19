@@ -7,10 +7,12 @@ namespace GUI
     public partial class MainPage : ContentPage
     {
         MetalInventoryTracker inventory;
+        MetalType metal;
         public MainPage()
         {
             InitializeComponent();
             inventory = new();
+            metal = new("Silver");
         }
 
         private void OpenInventoryFile(Object Sender, EventArgs a)
@@ -27,6 +29,10 @@ namespace GUI
 
         private void ChangeToInventoryPage()
         {
+            //foreach(InventoryEntry entry in inventory)
+            //{
+
+            //}
             WelcomePrompt.IsVisible = false;
             AddEntryPage.IsVisible = false;
             InventoryPage.IsVisible = true;
@@ -50,7 +56,17 @@ namespace GUI
 
         private void FinishEntry(Object Sender, EventArgs a)
         {
-            ChangeToInventoryPage();
+            if (float.TryParse(QuantityEntry.Text, out float ounces) && float.TryParse(PriceEntry.Text, out float price)){
+                InventoryEntry entry = new(DateEntry.Text, metal, ounces, price, LocationEntry.Text);
+                inventory.addEntry(entry);
+                ChangeToInventoryPage();
+            }
+            else
+            {
+                ChangeToInventoryPage();
+                ///TODO: Add message for error parsing float. 
+            }
+
         }
 
     }

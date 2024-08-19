@@ -108,22 +108,33 @@
             VerticalOptions="Center"
             Padding="100"
             >
-            <HorizontalStackLayout
-                 HorizontalOptions="Center"
-                >
-                <Label Text="Quantity: " TextColor="Black"></Label>
+            <Label Text="Ounces: " TextColor="Black" HorizontalOptions="Center"></Label>
                 <Border
-                MinimumWidthRequest="275"
+                MaximumWidthRequest="275"
                 >
-                    <Entry></Entry>
+                <Entry x:Name="QuantityEntry" TextColor="Black"></Entry>
                 </Border>
-                <Label Text="Price: " TextColor="Black"></Label>
+
+            <Label Text="Price ($): " TextColor="Black" HorizontalOptions="Center"></Label>
                 <Border
-                MinimumWidthRequest="275"
+                MaximumWidthRequest="275"
                 >
-                    <Entry></Entry>
+                    <Entry x:Name="PriceEntry" TextColor="Black"></Entry>
                 </Border>
-            </HorizontalStackLayout>
+
+            <Label Text="Location: " TextColor="Black" HorizontalOptions="Center"></Label>
+                <Border
+                MaximumWidthRequest="275"
+                >
+                <Entry x:Name="LocationEntry" TextColor="Black"></Entry>
+                </Border>
+
+            <Label Text="Date: " TextColor="Black" HorizontalOptions="Center"></Label>
+                <Border
+                MaximumWidthRequest="275"
+                >
+                <Entry x:Name="DateEntry" TextColor="Black"></Entry>
+                </Border>
 
             <HorizontalStackLayout
                 HorizontalOptions="Center"

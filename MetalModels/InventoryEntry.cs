@@ -1,4 +1,4 @@
-﻿using MetalModels;
+﻿//using MetalModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,7 @@ namespace Models
         /// <summary>
         /// The specific metal
         /// </summary>
-        private Metal metal;
+        private MetalType metal;
 
         /// <summary>
         /// Represents the amount of metal 
@@ -42,7 +42,7 @@ namespace Models
         /// <param name="metal">The specific metal</param>
         /// <param name="amountPaid">The amount the user paid</param>
         /// <param name="location">Where the metal was purchased</param>
-        public InventoryEntry(string dateAcquired, Metal metal, float ounces, float amountPaid, string location)
+        public InventoryEntry(string dateAcquired, MetalType metal, float ounces, float amountPaid, string location)
         {
             this.dateAcquired = dateAcquired;
             this.metal = metal;
