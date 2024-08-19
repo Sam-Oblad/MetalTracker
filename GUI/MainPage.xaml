@@ -124,7 +124,7 @@
                 <Entry x:Name="QuantityEntry" TextColor="Black"></Entry>
                 </Border>
 
-            <Label Text="Price ($): " TextColor="Black" HorizontalOptions="Center"></Label>
+            <Label Text="Total Cost ($): " TextColor="Black" HorizontalOptions="Center"></Label>
                 <Border
                 MaximumWidthRequest="275"
                 >

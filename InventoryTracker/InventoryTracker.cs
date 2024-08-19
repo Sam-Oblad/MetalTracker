@@ -65,7 +65,7 @@ namespace InventoryTracker
                     amountsPaid.Add(entry.amountPaid);
                 }
 
-                return Tuple.Create(ounces, amountsPaid.Average(), amountsPaid.Sum());
+                return Tuple.Create(ounces, amountsPaid.Sum()/ounces, amountsPaid.Sum());
             }
             return Tuple.Create(0f, 0f, 0f);
         }

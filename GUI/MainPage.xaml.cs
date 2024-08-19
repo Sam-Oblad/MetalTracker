@@ -23,6 +23,7 @@ namespace GUI
         private void NewInventoryFile(Object Sender, EventArgs a)
         {
             ChangeToInventoryPage();
+            inventory = new();
             OunceWidget.Text = " 0.00";
             PriceWidget.Text = " 0.00";
             AVGWidget.Text = " 0.00";
@@ -31,9 +32,9 @@ namespace GUI
         private void ChangeToInventoryPage()
         {
             Tuple<float, float, float> avgs = inventory.CalculateAverages();
-            OunceWidget.Text = avgs.Item1.ToString();
-            PriceWidget.Text = avgs.Item3.ToString();
-            AVGWidget.Text = avgs.Item2.ToString();
+            OunceWidget.Text = avgs.Item1.ToString("F2");
+            PriceWidget.Text = avgs.Item3.ToString("F2");
+            AVGWidget.Text = avgs.Item2.ToString("F2");
 
             Table.Children.Clear();
             foreach (InventoryEntry entry in inventory.metalInventory)
