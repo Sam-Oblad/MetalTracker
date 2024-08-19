@@ -83,6 +83,14 @@
                     <Label TextColor="Black" x:Name="PriceWidget"></Label>
                 </HorizontalStackLayout>
 
+                <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Margin="0,10,0,20"
+                >
+                    <Label TextColor="Black">Average Price/Ounce:</Label>
+                    <Label TextColor="Black" x:Name="AVGWidget"></Label>
+                </HorizontalStackLayout>
+
                 <Border
                     MaximumHeightRequest="500"
                     MaximumWidthRequest="500"

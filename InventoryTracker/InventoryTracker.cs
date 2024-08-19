@@ -53,7 +53,22 @@ namespace InventoryTracker
             }
         }
 
+        public Tuple<float, float, float> CalculateAverages()
+        {
+            if (metalInventory.Count > 0)
+            {
+                float ounces = 0;
+                HashSet<float> amountsPaid = new();
+                foreach (InventoryEntry entry in metalInventory)
+                {
+                    ounces += entry.ounces;
+                    amountsPaid.Add(entry.amountPaid);
+                }
 
+                return Tuple.Create(ounces, amountsPaid.Average(), amountsPaid.Sum());
+            }
+            return Tuple.Create(0f, 0f, 0f);
+        }
         
     }
 }

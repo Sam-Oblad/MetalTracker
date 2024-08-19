@@ -25,10 +25,16 @@ namespace GUI
             ChangeToInventoryPage();
             OunceWidget.Text = " 0.00";
             PriceWidget.Text = " 0.00";
+            AVGWidget.Text = " 0.00";
         }
 
         private void ChangeToInventoryPage()
         {
+            Tuple<float, float, float> avgs = inventory.CalculateAverages();
+            OunceWidget.Text = avgs.Item1.ToString();
+            PriceWidget.Text = avgs.Item3.ToString();
+            AVGWidget.Text = avgs.Item2.ToString();
+
             Table.Children.Clear();
             foreach (InventoryEntry entry in inventory.metalInventory)
             {
