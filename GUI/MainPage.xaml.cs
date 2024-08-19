@@ -29,6 +29,7 @@ namespace GUI
 
         private void ChangeToInventoryPage()
         {
+            Table.Children.Clear();
             foreach (InventoryEntry entry in inventory.metalInventory)
             {
                 Label label = new Label();
@@ -36,6 +37,7 @@ namespace GUI
                 label.Text = $"Date: {entry.dateAcquired} Ounces: {entry.ounces} Price: {entry.amountPaid} Location:{entry.location}";
                 Table.Add(label);
             }
+            ClearAddEntryBoxes();
             WelcomePrompt.IsVisible = false;
             AddEntryPage.IsVisible = false;
             InventoryPage.IsVisible = true;
@@ -69,6 +71,15 @@ namespace GUI
                 ChangeToInventoryPage();
                 ///TODO: Add message for error parsing float. 
             }
+
+        }
+
+        private void ClearAddEntryBoxes()
+        {
+            DateEntry.Text = "";
+            QuantityEntry.Text = "";
+            PriceEntry.Text = "";
+            LocationEntry.Text = "";
 
         }
 
