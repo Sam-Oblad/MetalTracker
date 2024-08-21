@@ -22,8 +22,8 @@ namespace GUI
 
         private void NewInventoryFile(Object Sender, EventArgs a)
         {
-            ChangeToInventoryPage();
             inventory = new();
+            ChangeToInventoryPage();
             OunceWidget.Text = " 0.00";
             PriceWidget.Text = " 0.00";
             AVGWidget.Text = " 0.00";
@@ -87,8 +87,6 @@ namespace GUI
             QuantityEntry.Text = "";
             PriceEntry.Text = "";
             LocationEntry.Text = "";
-
         }
-
     }
 }
