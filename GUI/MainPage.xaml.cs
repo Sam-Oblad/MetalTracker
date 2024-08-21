@@ -66,7 +66,7 @@ namespace GUI
             ChangeToInventoryPage();
         }
 
-        private void FinishEntry(Object Sender, EventArgs a)
+        private async void FinishEntry(Object Sender, EventArgs a)
         {
             if (float.TryParse(QuantityEntry.Text, out float ounces) && float.TryParse(PriceEntry.Text, out float price)){
                 InventoryEntry entry = new(DateEntry.Text, metal, ounces, price, LocationEntry.Text);
@@ -76,7 +76,7 @@ namespace GUI
             else
             {
                 ChangeToInventoryPage();
-                ///TODO: Add message for error parsing float. 
+                await DisplayAlert("Error", "Unable to add entry, please enter valid numbers for quantity and price (i.e. 10.8)", "OK");
             }
 
         }
