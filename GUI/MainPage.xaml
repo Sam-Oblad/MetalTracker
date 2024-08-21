@@ -72,14 +72,14 @@
                 HorizontalOptions="Center"
                 Padding="10"
                 >
-                    <Label TextColor="Black">Total Ounces:</Label>
+                    <Label TextColor="Black" Text="Total Ounces: "></Label>
                     <Label TextColor="Black" x:Name="OunceWidget"></Label>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout
                 HorizontalOptions="Center"
                 Margin="0,10,0,20"
                 >
-                    <Label TextColor="Black">Total Price:</Label>
+                    <Label TextColor="Black">Total Price: </Label>
                     <Label TextColor="Black" x:Name="PriceWidget"></Label>
                 </HorizontalStackLayout>
 
@@ -87,7 +87,7 @@
                 HorizontalOptions="Center"
                 Margin="0,10,0,20"
                 >
-                    <Label TextColor="Black">Average Price/Ounce:</Label>
+                    <Label TextColor="Black">Average Price/Ounce: </Label>
                     <Label TextColor="Black" x:Name="AVGWidget"></Label>
                 </HorizontalStackLayout>
 
@@ -121,28 +121,28 @@
                 <Border
                 MaximumWidthRequest="275"
                 >
-                <Entry x:Name="QuantityEntry" TextColor="Black"></Entry>
+                <Entry x:Name="QuantityEntry" TextColor="Black" BackgroundColor="White"></Entry>
                 </Border>
 
             <Label Text="Total Cost ($): " TextColor="Black" HorizontalOptions="Center"></Label>
                 <Border
                 MaximumWidthRequest="275"
                 >
-                    <Entry x:Name="PriceEntry" TextColor="Black"></Entry>
+                    <Entry x:Name="PriceEntry" TextColor="Black" BackgroundColor="White"></Entry>
                 </Border>
 
             <Label Text="Location: " TextColor="Black" HorizontalOptions="Center"></Label>
                 <Border
                 MaximumWidthRequest="275"
                 >
-                <Entry x:Name="LocationEntry" TextColor="Black"></Entry>
+                <Entry x:Name="LocationEntry" TextColor="Black" BackgroundColor="White"></Entry>
                 </Border>
 
             <Label Text="Date: " TextColor="Black" HorizontalOptions="Center"></Label>
                 <Border
                 MaximumWidthRequest="275"
                 >
-                <Entry x:Name="DateEntry" TextColor="Black"></Entry>
+                <Entry x:Name="DateEntry" TextColor="Black" BackgroundColor="White"></Entry>
                 </Border>
 
             <HorizontalStackLayout
